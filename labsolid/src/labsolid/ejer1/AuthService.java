@@ -32,5 +32,5 @@ public class AuthService {
 	public boolean singInWithApple(String log, String pass) {
 		//use the Apple api
 		return true;
-	}
+	} 	
 }
