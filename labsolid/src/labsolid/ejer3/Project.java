@@ -4,19 +4,20 @@ import java.util.Vector;
 
 public class Project {
 	
-	public Vector<ProjectFile> files = new Vector<ProjectFile>();
+	public Vector<ReadWriteProyectFile> files = new Vector<ReadWriteProyectFile>();
 	
-	public void addProject(ProjectFile p) {
+	public void addProject(ReadWriteProyectFile p) {
 		files.add(p);
 	}
 	
 	public void loadAllFiles() {
-		for (ProjectFile f : files)
+		for (ReadWriteProyectFile f : files)
 			f.loadFile();
 	}
 	
 	public void storeAllFiles() {
-		for (ProjectFile f : files)
+		for (ReadWriteProyectFile f : files)
 			f.storeFile();
 	}
+
 }

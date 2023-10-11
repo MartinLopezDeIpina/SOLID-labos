@@ -1,4 +1,4 @@
-package labsolid.ejer2;
+package ejer4;
 
 import java.util.Date;
 
@@ -11,10 +11,13 @@ public class Bill {
 	
 	private float billTotal;
 	
+	private DeductionCalculator deductionCalculator;
+	private VatCalculator vatCalculator;
+	
 	// Método que calcula el total de la factura
 	public void billTotalCalc() {
-		float deduction = DeductionCalculator.calculateDeduction(InitialAmount);
-		float vat = VatCalculator.calculateVAT(InitialAmount);
+		float deduction = deductionCalculator.calculateDeduction(InitialAmount);
+		float vat = vatCalculator.calculateVat(InitialAmount);
 		
 		billTotal = (InitialAmount - deduction) + vat;
 	}

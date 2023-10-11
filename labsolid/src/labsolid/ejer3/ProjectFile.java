@@ -1,18 +1,17 @@
 package labsolid.ejer3;
 
-public class ProjectFile {
+public abstract class ProjectFile {
 	
-	public String filePath;
+	protected String filePath;
 	
-	public ProjectFile(String filePath) {
-		this.filePath = filePath;
+	public ProjectFile(String path) {
+		this.filePath = path;
 	}
 	
 	public void loadFile() {
 		System.out.println("file loaded from " + filePath);
 	}
 	
-	public void storeFile() {
-		System.out.println("file saved to " + filePath);
-	}
+	public abstract void storeFile();
+
 }
